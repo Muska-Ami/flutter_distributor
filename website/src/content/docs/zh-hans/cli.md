@@ -6,7 +6,7 @@ description: 如何使用 Flutter Distributor 的命令行界面（CLI）
 ## 安装
 
 ```
-dart pub global activate flutter_distributor
+dart pub global activate -s path tool/flutter_distributor/packages/flutter_distributor
 ```
 
 ## 命令

@@ -8,7 +8,7 @@ Flutter Distributor 是一款全能的 Flutter 应用打包和发布工具，为
 ## 安装
 
 ```
-dart pub global activate flutter_distributor
+dart pub global activate -s path tool/flutter_distributor/packages/flutter_distributor
 ```
 
 ## 用法
