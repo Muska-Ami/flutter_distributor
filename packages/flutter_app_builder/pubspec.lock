@@ -282,6 +282,7 @@ packages:
     source: hosted
     version: "1.0.4"
   shell_executor:
+    path: ../shell_executor
     dependency: "direct main"
     description:
       name: shell_executor

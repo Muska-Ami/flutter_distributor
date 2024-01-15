@@ -130,6 +130,7 @@ packages:
     source: hosted
     version: "1.2.3"
   shell_executor:
+    path: ../shell_executor
     dependency: "direct main"
     description:
       name: shell_executor

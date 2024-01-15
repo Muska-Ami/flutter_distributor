@@ -9,10 +9,12 @@ environment:
   sdk: ">=2.16.0 <4.0.0"
 
 dependencies:
-  app_package_parser: ^0.2.4
+  app_package_parser:
+    path: ../app_package_parser
   archive: ^3.4.10
   args: ^2.2.0
-  shell_executor: ^0.1.5
+  shell_executor:
+    path: ../shell_executor
   xml: ^6.3.0
 
 executables:
