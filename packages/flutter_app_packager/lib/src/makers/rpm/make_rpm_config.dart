@@ -145,7 +145,6 @@ class MakeRPMConfig extends MakeConfig {
           '%defattr': '(-,root,root)',
           '%attr': '(4755, root, root) %{_datadir}/pixmaps/%{name}.png',
         },
-        '%_binaries_in_noarch_packages_terminate_build': '0'
       },
       'DESKTOP': {
         'Type': 'Application',
@@ -199,6 +198,9 @@ class MakeRPMConfig extends MakeConfig {
       'DESKTOP': desktopFile,
       'SPEC': '$preamble\n\n$body\n\n$inlineBody',
     };
+    if (buildArch == 'noarch') {
+      map['SPEC'] = '${map['SPEC']}\n\n%_binaries_in_noarch_packages_terminate_build   0';
+    }
     return Map.castFrom<String, String?, String, String>(map);
   }
 }
