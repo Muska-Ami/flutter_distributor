@@ -3,6 +3,7 @@ description: App package maker
 version: 0.3.6
 homepage: https://distributor.leanflutter.org
 repository: https://github.com/leanflutter/flutter_distributor/tree/main/packages/app_package_maker
+publish_to: none
 
 environment:
   sdk: ">=2.16.0 <4.0.0"
