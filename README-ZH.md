@@ -55,7 +55,7 @@
 ### 安装
 
 ```
-dart pub global activate flutter_distributor
+dart pub global activate -s path tool/flutter_distributor/packages/flutter_distributor
 ```
 
 ### 用法

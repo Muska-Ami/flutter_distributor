@@ -6,7 +6,7 @@ description: How to use the command line interface (CLI) for Flutter Distributor
 ## Installation
 
 ```
-dart pub global activate flutter_distributor
+dart pub global activate -s path tool/flutter_distributor/packages/flutter_distributor
 ```
 
 ## Commands
