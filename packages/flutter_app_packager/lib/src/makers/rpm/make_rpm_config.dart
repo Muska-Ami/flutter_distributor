@@ -118,7 +118,7 @@ class MakeRPMConfig extends MakeConfig {
           'URL': url,
           'Requires': requires?.join(', '),
           'BuildRequires': buildRequires?.join(', '),
-          'BuildArch': buildArch ?? 'x86_64',
+          'BuildArch': buildArch ?? 'noarch',
         }..removeWhere((key, value) => value == null),
         'body': {
           '%description': description ?? pubspec.description,

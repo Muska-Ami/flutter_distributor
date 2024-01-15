@@ -270,7 +270,8 @@ class MakeDebConfig extends MakeLinuxPackageConfig {
         'Version': appVersion.toString(),
         'Section': section,
         'Priority': priority,
-        'Architecture': _getArchitecture(),
+        // 'Architecture': _getArchitecture(),
+        'Architecture': 'all',
         'Essential':
             essential != null ? (essential == true ? 'yes' : 'no') : null,
         'Installed-Size': installedSize,
@@ -368,6 +369,7 @@ class MakeDebConfigLoader extends DefaultMakeConfigLoader {
     return MakeDebConfig.fromJson(map).copyWith(baseMakeConfig);
   }
 }
+/*
 
 String _getArchitecture() {
   final result = Process.runSync('uname', ['-m']);
@@ -377,3 +379,4 @@ String _getArchitecture() {
     return 'amd64';
   }
 }
+*/

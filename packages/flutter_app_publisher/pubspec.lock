@@ -10,18 +10,20 @@ packages:
     source: hosted
     version: "1.0.6"
   app_package_parser:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "../app_package_parser"
-      relative: true
-    source: path
+      name: app_package_parser
+      sha256: d5cd87df89c556012fdfa69097a92153b17bb753f549aac849c294eca6b42f9f
+      url: "https://pub.dev"
+    source: hosted
     version: "0.2.4"
   app_package_publisher:
     dependency: "direct main"
     description:
-      path: "../app_package_publisher"
-      relative: true
-    source: path
+      name: app_package_publisher
+      sha256: "41b2e4279494044da07dd054e934b5a4e51e9c7646d1c10e5d7e8b4a0b1cb782"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.3.6"
   archive:
     dependency: transitive
@@ -202,9 +204,10 @@ packages:
   parse_app_package:
     dependency: "direct main"
     description:
-      path: "../parse_app_package"
-      relative: true
-    source: path
+      name: parse_app_package
+      sha256: "4d5064840ff547709e80685358fe5a7e1eb3e0b60dac6c3cb886b407b83233a1"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.3.6"
   path:
     dependency: transitive
@@ -257,9 +260,10 @@ packages:
   shell_executor:
     dependency: "direct main"
     description:
-      path: "../shell_executor"
-      relative: true
-    source: path
+      name: shell_executor
+      sha256: "49254102f8feba7d5a4d528a412b22e59e7907dd4214036e9b9c6cbf047589e9"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.1.5"
   source_span:
     dependency: transitive
