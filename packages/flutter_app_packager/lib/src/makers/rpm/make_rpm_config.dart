@@ -118,7 +118,7 @@ class MakeRPMConfig extends MakeConfig {
           'URL': url,
           'Requires': requires?.join(', '),
           'BuildRequires': buildRequires?.join(', '),
-          'BuildArch': buildArch ?? 'noarch',
+          'BuildArch': buildArch ?? 'x86_64',
         }..removeWhere((key, value) => value == null),
         'body': {
           '%description': description ?? pubspec.description,
@@ -198,9 +198,6 @@ class MakeRPMConfig extends MakeConfig {
       'DESKTOP': desktopFile,
       'SPEC': '$preamble\n\n$body\n\n$inlineBody',
     };
-    if (buildArch == 'noarch') {
-      map['SPEC'] = '${map['SPEC']}\n\n%_binaries_in_noarch_packages_terminate_build   0';
-    }
     return Map.castFrom<String, String?, String, String>(map);
   }
 }

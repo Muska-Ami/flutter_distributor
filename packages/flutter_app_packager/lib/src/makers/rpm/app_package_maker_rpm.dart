@@ -72,7 +72,7 @@ class AppPackageMakerRPM extends AppPackageMaker {
     final buildRoot = path.join(buildPath, makeConfig.appName);
     final specsPath = path.join(rpmbuildDirPath, 'SPECS');
     final rpmPath =
-        path.join(rpmbuildDirPath, 'RPMS', makeConfig.buildArch ?? 'noarch');
+        path.join(rpmbuildDirPath, 'RPMS', makeConfig.buildArch ?? 'x86_64');
     final buildWivesDirFile = Directory(buildRoot);
     if (!buildWivesDirFile.existsSync()) {
       buildWivesDirFile.createSync(recursive: true);
