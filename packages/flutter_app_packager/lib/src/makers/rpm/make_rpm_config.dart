@@ -144,7 +144,8 @@ class MakeRPMConfig extends MakeConfig {
         'inline-body': {
           '%defattr': '(-,root,root)',
           '%attr': '(4755, root, root) %{_datadir}/pixmaps/%{name}.png',
-        }
+        },
+        '%_binaries_in_noarch_packages_terminate_build': '0'
       },
       'DESKTOP': {
         'Type': 'Application',
