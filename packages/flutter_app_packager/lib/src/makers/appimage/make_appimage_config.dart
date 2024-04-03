@@ -73,7 +73,7 @@ class MakeAppImageConfig extends MakeConfig {
     final fields = {
       'Name': displayName,
       'GenericName': genericName,
-      'Exec': 'LD_LIBRARY_PATH=usr/lib $appName %u',
+      'Exec': 'LD_LIBRARY_PATH=usr/lib $appBinaryName %u',
       'Icon': appName,
       'Type': 'Application',
       'StartupNotify': startupNotify ? 'true' : 'false',
@@ -100,7 +100,7 @@ class MakeAppImageConfig extends MakeConfig {
 
 cd "\$(dirname "\$0")"
 export LD_LIBRARY_PATH=usr/lib
-exec ./$appName
+exec ./$appBinaryName
 ''';
   }
 }
