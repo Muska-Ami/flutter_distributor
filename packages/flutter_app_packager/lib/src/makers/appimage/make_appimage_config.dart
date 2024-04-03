@@ -33,6 +33,7 @@ class AppImageAction {
 class MakeAppImageConfig extends MakeConfig {
   MakeAppImageConfig({
     required this.displayName,
+    required this.appBinaryName,
     required this.icon,
     this.keywords = const [],
     this.categories = const [],
@@ -54,6 +55,7 @@ class MakeAppImageConfig extends MakeConfig {
           .map((e) => AppImageAction.fromJson(
               (Map.castFrom<dynamic, dynamic, String, dynamic>(e))))
           .toList(),
+      appBinaryName: map['app_binary_name'],
     );
   }
 
@@ -65,6 +67,7 @@ class MakeAppImageConfig extends MakeConfig {
   final String genericName;
   final String displayName;
   final List<String> include;
+  final String appBinaryName;
 
   String get desktopFileContent {
     final fields = {
@@ -83,8 +86,7 @@ class MakeAppImageConfig extends MakeConfig {
     final actions = this.actions.map((action) {
       final fields = {
         'Name': action.name,
-        'Exec':
-            'LD_LIBRARY_PATH=usr/lib $appName ${action.arguments.join(' ')} %u',
+        'Exec': 'LD_LIBRARY_PATH=usr/lib $appBinaryName ${action.arguments.join(' ')} %u',
       };
       return '[Desktop Action ${action.label}]\n${fields.entries.map((e) => '${e.key}=${e.value}').join('\n')}';
     }).join('\n\n');
