@@ -10,7 +10,7 @@ environment:
 dependencies:
   app_package_maker:
     path: ../app_package_maker
-  archive: ^3.4.10
+  archive: ^3.6.1
   io: ^1.0.3
   liquid_engine: ^0.2.2
   msix: ^3.16.6
