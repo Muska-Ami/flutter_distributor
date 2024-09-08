@@ -86,7 +86,8 @@ class MakeAppImageConfig extends MakeConfig {
     final actions = this.actions.map((action) {
       final fields = {
         'Name': action.name,
-        'Exec': 'LD_LIBRARY_PATH=usr/lib $appBinaryName ${action.arguments.join(' ')} %u',
+        'Exec':
+            'LD_LIBRARY_PATH=usr/lib $appBinaryName ${action.arguments.join(' ')} %u',
       };
       return '[Desktop Action ${action.label}]\n${fields.entries.map((e) => '${e.key}=${e.value}').join('\n')}';
     }).join('\n\n');
